@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+    dosbox:
+        image: lacsap/dosbox
+        container_name: dosbox
+        volumes:
+            - /home/atom/apps/dosbox/data:/root/dosbox
+            - /home/atom/apps/dosbox/configs:/root/.dosbox
+            - /tmp/.X11-unix:/tmp/.X11-unix
+        environment:
+            - DISPLAY=$DISPLAY
